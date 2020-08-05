@@ -1,0 +1,24 @@
+
+
+<form [formGroup]="detalleForm" (ngSubmit)="save()">
+    <div class="form-row">
+        <div [hidden]="false">
+            <input type="text"   type="hidden" formControlName="detalle_id" name="detalle_id" id="detalle_id" >
+        </div>
+      <div class="form-group col-md-6">Cargo
+        <input type="text" class="form-control" id="detalle_cargo" formControlName="detalle_cargo" placeholder="Analista" >
+      </div>
+      <div class="form-group col-md-6">Fecha de Inicio
+        <input type="date" class="form-control"  formControlName="detalle_inicio" id="detalle_inicio" >
+      </div>
+      <div class="form-group col-md-6">Fecha Fin
+      <input type="date" class="form-control" formControlName="detalle_fin" id="detalle_fin" >
+      </div>
+      <div class="form-group col-md-6">Empresa
+      <input type="text" class="form-control" formControlName="empresa_id" id="empresa_id" placeholder="PComputer">
+      </div>
+    </div>
+    <button type="submit" [disabled]="!detalleForm.valid">Save</button>
+    
+  </form>
+  

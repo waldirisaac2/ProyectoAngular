@@ -1,0 +1,39 @@
+
+<form [formGroup]="EgresadoForm" (ngSubmit)="save()">
+    <div class="form-row">
+        <div [hidden]="false">
+            <input type="hidden" formControlName="empresa_id" name="empresa_id" id="empresa_id" >
+        </div>
+      <div class="form-group col-md-6">Nombre:
+        <input type="text" class="form-control" formControlName="egresado_nombre" id="egresado_nombre"  placeholder="Juan" >
+      </div>
+      <div class="form-group col-md-6"> Apellido Materno:
+        <input type="email" class="form-control"  formControlName="egresado_ap_materno" id="egresado_ap_materno" placeholder="Gutierrez" >
+      </div>
+      <div class="form-group col-md-6">Apellido Paterno:
+      <input type="text" class="form-control" formControlName="egresado_ap_paterno" id="egresado_ap_paterno" placeholder="Vega">
+      </div>
+      <div class="form-group col-md-6">Estado:
+      <input type="text" class="form-control" formControlName="egresado_estado" id="egresado_estado" >
+      </div>
+      <div class="form-group col-md-6">Dni:
+        <input type="text" class="form-control" formControlName="egresado_dni" id="egresado_dni" >
+      </div>
+      <div class="form-group col-md-6">Fecha de nacimiento:
+        <input type="date" class="form-control" formControlName="egresado_fecha_nacimiento" id="egresado_fecha_nacimiento" >
+      </div>
+      <div class="form-group col-md-6">Celular:
+        <input type="email" class="form-control"  formControlName="egresado_celular" id="egresado_celular" >
+      </div>
+      <div class="form-group col-md-6">Codigo:
+      <input type="text" class="form-control" formControlName="egresado_codigo" id="egresado_codigo" >
+      </div>
+      <div class="form-group col-md-6">rol:
+        <input type="text" class="form-control" formControlName="roles_id" id="roles_id" >
+      </div>
+      <div class="form-group col-md-6">Escuela profesional:
+        <input type="text" class="form-control" formControlName="ep_id" id="ep_id" >
+      </div>
+    </div>
+    <button type="submit" [disabled]="!EgresadoForm.valid">Save</button>   
+  </form>

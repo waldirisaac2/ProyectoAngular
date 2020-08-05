@@ -1,0 +1,77 @@
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  agregar
+</button>
+
+<table class="table" >
+    <thead class="thead-secundary bg-success">
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">nombre</th>
+        <th scope="col">correo</th>
+        <th scope="col">direccion</th>
+        <th scope="col">telefono</th>
+        <th scope="col">rubro</th>
+        <th scope="col">Egresado_id</th>
+
+      </tr> 
+    </thead>
+    <tbody>
+      <tr *ngFor="let em of list">
+        <td >{{ em.empresa_id }}</td>
+        <td>{{ em.empresa_nombre }}</td>
+        <td>{{ em.empresa_correo }}</td>
+        <td >{{ em.empresa_direccion }}</td>
+        <td>{{ em.empresa_telefono }}</td>
+        <td>{{ em.empresa_rubro }}</td>
+        <td>{{ em.egresado_id }}</td>
+        <td ><span class="btn-label"><button class="btn btn-labeled btn-danger" (click)="delete(em.empresa_id)">Delete</button></span></td>
+        <td ><button type="button"  routerLink="/empresa_form/{{ em.empresa_id }}" routerLinkActive="active" class="btn btn-primary"> editar </button></td>
+      </tr>
+    </tbody>
+</table>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agregando</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+
+    <div class="modal-body">         
+          <form [formGroup]="empresaForm" (ngSubmit)="save()">
+            <div class="form-row">
+                <div [hidden]="false">
+                    <input type="text" type="hidden" formControlName="empresa_id" id="detalle_id" >
+                </div>
+              <div class="form-group col-md-6">Empresa:
+                <input type="text" class="form-control" formControlName="empresa_nombre" id="empresa_nombre"   >
+              </div>
+              <div class="form-group col-md-6">Correo:
+                <input type="date" class="form-control"  formControlName="empresa_correo" id="empresa_correo" >
+              </div>
+              <div class="form-group col-md-6">Direccion:
+              <input type="text" class="form-control" formControlName="empresa_direccion" id="empresa_direccion" >
+              </div>
+              <div class="form-group col-md-6">Telefono:
+              <input type="text" class="form-control" formControlName="empresa_telefono" id="empresa_telefono" >
+              </div>
+              <div class="form-group col-md-6">Rubro:
+                <input type="text" class="form-control" formControlName="empresa_rubro" id="empresa_rubro" >
+              </div>
+              <div class="form-group col-md-6">Egresado:
+                <input type="text" class="form-control" formControlName="egresado_id" id="egresado_id" >
+              </div>
+            </div>
+            <button type="submit" [disabled]="!empresaForm.valid">Save</button>   
+          </form>
+
+      </div>
+    </div>
+  </div>
+</div>

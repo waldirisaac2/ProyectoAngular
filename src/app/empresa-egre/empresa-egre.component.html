@@ -1,0 +1,39 @@
+<form [formGroup]="empresaForm" (ngSubmit)="save()">
+
+    <div [hidden]="false">
+        <input type="text" formControlName="empresa_id" name="empresa_id" id="empresa_id" >
+    </div>
+    <br>
+    <label>
+        Empresa:
+        <input type="text"  formControlName="empresa_nombre" name="empresa_nombre" id="empresa_nombre" required>
+    </label>
+    
+    <br>
+    <label>
+        correo:
+        <input type="text"  formControlName="empresa_correo" name="empresa_correo" id="empresa_correo" required>
+    </label>
+    <br>
+    <label>
+        direccion:
+        <input type="text" formControlName="empresa_direccion" name="empresa_direccion" id="empresa_direccion" required>
+    </label>
+    <br>
+    <label>
+        telefono:
+        <input type="text" formControlName="empresa_telefono" name="empresa_telefono" id="empresa_telefono" required>
+    </label>
+    <br>
+    <label>
+        rubro:
+        <input type="text" formControlName="empresa_rubro" name="empresa_rubro" id="empresa_rubro" required>
+    </label>
+    <br>
+    <label>
+        id:
+        <input type="text" formControlName="egresado_id" name="egresado_id" id="egresado_id" required>
+    </label>
+    
+    
+</form>

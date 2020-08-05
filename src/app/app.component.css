@@ -1,0 +1,23 @@
+.nueva{
+    text-align:center;
+}
+
+
+.navbar navbar-expand-lg navbar-dark bg-primary{
+    background-color: #800000;
+}
+
+
+.col-lg-8{
+    padding-top: 2%;
+}
+
+.col-lg-2{
+    background-color: #992e45;
+}
+
+.logoclas{
+    margin-right: 20%;
+    text-align: center;
+    padding-right: 10%;
+}

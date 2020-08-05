@@ -1,0 +1,156 @@
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>iPortfolio Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio - v1.4.0
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+  <body>
+    
+  
+
+<div class="row"  >
+    <div class="row col-lg-3" *ngIf="list">
+
+    <header id="header" *ngIf="loggedIn" >
+    
+      
+      <div class="d-flex flex-column">
+        <a class="navbar-brand" routerLink="perfilegresado">
+          <img src="/assets/imagenes/aea.png" width="200" height="50" class="d-inline-block align-top" alt="">
+        </a>
+        <a class="imagen19 navbar-brand">
+          <img src="../../assets/imagenes/aeaaa.jpg" width="100" height="100" class="d-inline-block align-top" alt="">
+        </a>
+        <div class="profile" >
+          
+          <h1 class="text-light">{{list.name}} <br></h1>
+          <h6 class="txtcorreo text-light"><a>{{list.email}}</a> <br></h6>
+          
+        </div>
+  
+        <nav class="nav-menu" >
+          <ul>
+            <hr><hr>
+            <li class="nav-item active">
+              <a class="nav-link" routerLink="/mostraregresadosindex">EGRESADO</a>
+            </li><hr><hr>
+            <li class="nav-item active">
+              <a class="nav-link" routerLink="/empresa_index">EMPRESA</a>
+            </li><hr><hr>
+            <li class="nav-item active">
+              <a class="nav-link" routerLink="/cursos_index">CURSOS</a>
+            </li><hr><hr>
+            <li class="nav-item active">
+              <a class="nav-link" routerLink="/detalleindex">DETALLE DEL TRABAJO</a>
+            </li><hr>
+           <hr>
+           <li class="nav-item active">
+            <a class="nav-link" target="_blank" href="https://www.convocatoriasdetrabajo.com/ofertas-de-empleo-para-INGENIEROS-DE-SISTEMAS-9.html"  >OFERTA LABORAL</a>
+          </li><hr><hr>
+            <li class="active"><a href="#" (click)="logout($event)"> <span>SALIR</span></a></li>
+  
+          </ul>
+        </nav><!-- .nav-menu -->
+        
+      </div>
+    </header>     
+      <!--
+     
+        <div  *ngIf="loggedIn">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light list-group list-group-vertical" >
+                <a class="navbar-brand" href="#">INICIO</a>
+
+                <div style="text-align: center;" *ngIf="list" >
+
+                {{list.name}} <br>
+                {{list.email}} <br>
+
+                </div>
+        
+               <button class="navbar-toggler" type="button" data-toggle="collapse" 
+               data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+               </button>
+               
+                 <div class="collapse navbar-collapse list-group list-group-vertical " id="navbarText">
+                 <ul class="navbar-nav mr-auto ">
+                   <li class="nav-item ">
+                     <a class="nav-link" href="#">Opiniones <span class="sr-only">(current)</span></a>
+                   </li>
+                 </ul>
+               </div> 
+               <div class="collapse navbar-collapse list-group list-group-vertical " id="navbarText">
+                 <ul class="navbar-nav mr-auto ">
+                   <li class="nav-item ">
+                     <a class="nav-link" routerLink="datosgeneralesindex">DATOS PERSONALES <span class="sr-only">(current)</span></a>
+                   </li>
+                 </ul>
+               </div>
+               <div class="collapse navbar-collapse list-group list-group-vertical " id="navbarText">
+                 <ul class="navbar-nav mr-auto ">
+                   <li class="nav-item ">
+                     <a class="nav-link" routerLink="oferta_laboral">OFERTA DE EMPLEOS <span class="sr-only">(current)</span></a>
+                   </li>
+                 </ul>
+               </div> 
+               <div class="collapse navbar-collapse list-group list-group-vertical " id="navbarText">
+                 <ul class="navbar-nav mr-auto ">
+                   <li class="nav-item ">
+                     <a class="nav-link" href="#">EXPERIENCIA LABORAL <span class="sr-only">(current)</span></a>
+                   </li>
+                 </ul>
+               </div>
+               <div class="collapse navbar-collapse list-group list-group-vertical " id="navbarText">
+                 <ul class="navbar-nav mr-auto ">
+                   <li class="nav-item ">
+                             <img src="../assets/imagenes/16363.png" width="200" height="150">
+                   </li>
+                 </ul>
+               </div>
+               <div class="collapse navbar-collapse list-group list-group-vertical " id="navbarText">
+                   <ul class="navbar-nav mr-auto ">
+                     <li class="nav-item ">
+                       <a class="nav-link" (click)="logout($event)" href="#">SALIR <span class="sr-only">(current)</span></a>
+                     </li>
+                   </ul>
+                 </div>
+        
+             </nav>
+        </div>
+   
+      -->
+
+    </div>
+    <div class="row col-lg-9" >
+        <router-outlet></router-outlet>   
+    </div>    
+                
+</div>           
+</body> 
